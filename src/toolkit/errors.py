@@ -13,6 +13,10 @@ class OperatorAtFirstPositionError(ToolkitError):
     """Ошибка оператора в начале выражения"""
     pass
 
+class TwoOperandsError(ToolkitError):
+    """Ошибка двух операндов подряд"""
+    pass
+
 class OperatorAtLastPositionError(ToolkitError):
     """Ошибка оператора в конце выражения"""
     pass
@@ -35,4 +39,12 @@ class DifferentQuantitiesError(ToolkitError):
 
 class UnknownQuantityError(ToolkitError):
     """Ошибка неизвестных величин перевода"""
+    pass
+
+class NonNumericalValueError(ToolkitError):
+    """Ошибка нечислового значения"""
+    pass
+
+class InvalidValueError(ToolkitError):
+    """Ошибка недопустимого значения для какой-либо системы величин"""
     pass
