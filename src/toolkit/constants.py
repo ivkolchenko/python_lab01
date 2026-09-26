@@ -1,4 +1,5 @@
 import re
+import operator
 
 OPERATORS: list = ['+', '-', '*', '/', '(', ')', '//', '%', '-(', '+(']
 OPENING_BRACKET_VARIATIONS: list[str] = ['(', '-(', '+(']
@@ -10,3 +11,10 @@ LENGTH_COEFFICIENTS: dict = {'mm': 1, 'cm': 10, 'm': 1000, 'km': 1000000}
 WEIGHT_UNITS: list = ['g', 'kg']
 WEIGHT_COEFFICIENTS: dict = {'g': 1, 'kg': 1000}
 TEMPERATURE_UNITS: list = ['c', 'f', 'k']
+OPERATOR_DICT: dict = {
+    '+': operator.add,
+    '-': operator.sub,
+    '*': operator.mul,
+    '/': operator.truediv,
+    '//': operator.floordiv
+}
